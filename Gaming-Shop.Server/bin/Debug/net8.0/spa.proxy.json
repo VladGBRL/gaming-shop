@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:57164",
+"RedirectUrl": "",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.Server\\..\\gaming-shop.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

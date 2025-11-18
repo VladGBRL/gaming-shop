@@ -1,0 +1,24 @@
+{
+  "Version": 1,
+  "Hash": "39x0UQcD0sQMbj0lpeX4AJC1H5KiXXiVkz+3rdRTq3I=",
+  "Source": "Gaming-Shop.Server",
+  "BasePath": "_content/Gaming-Shop.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\gaming-shop.client\\gaming-shop.client.esproj",
+      "Version": 2,
+      "Source": "gaming-shop.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
