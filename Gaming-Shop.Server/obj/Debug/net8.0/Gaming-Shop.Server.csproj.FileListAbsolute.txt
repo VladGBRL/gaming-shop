@@ -37,9 +37,6 @@ C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\obj\Debug\net8.0\
 C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\obj\Debug\net8.0\Gaming-Shop.Server.pdb
 C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\obj\Debug\net8.0\Gaming-Shop.Server.genruntimeconfig.cache
 C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\obj\Debug\net8.0\ref\Gaming-Shop.Server.dll
-C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\bin\Debug\net8.0\Gaming-Shop.AccountManagement.deps.json
-C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\bin\Debug\net8.0\Gaming-Shop.AccountManagement.runtimeconfig.json
-C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\bin\Debug\net8.0\Gaming-Shop.AccountManagement.exe
 C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\bin\Debug\net8.0\Azure.Core.dll
 C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\bin\Debug\net8.0\Azure.Identity.dll
 C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\bin\Debug\net8.0\Humanizer.dll
@@ -158,3 +155,5 @@ C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\bin\Debug\net8.0\
 C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\bin\Debug\net8.0\Gaming-Shop.AccountManagement.dll
 C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\bin\Debug\net8.0\Gaming-Shop.AccountManagement.pdb
 C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\obj\Debug\net8.0\Gaming-Shop.Server.sourcelink.json
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\bin\Debug\net8.0\AutoMapper.dll
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
