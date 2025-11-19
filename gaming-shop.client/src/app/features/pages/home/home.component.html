@@ -1,0 +1,205 @@
+<app-navbar></app-navbar>
+
+<!-- Hero Section -->
+<section class="hero bg-dark text-light py-5 text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold mb-3">Discover the Latest Games & Hardware!</h1>
+    <p class="lead mb-4">Shop top games, consoles, and gaming accessories</p>
+    <a class="btn btn-primary btn-lg" (click)="handleButtonClick('/home')">Shop Now</a>
+  </div>
+</section>
+
+<!-- Categories Section -->
+<section class="categories py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">Shop by Category</h2>
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="card h-100 text-center">
+          <img src="images/games.jpg" class="card-img-top" alt="Games">
+          <div class="card-body">
+            <h5 class="card-title">Games</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100 text-center">
+          <img src="images/consoles.jpg" class="card-img-top" alt="Consoles">
+          <div class="card-body">
+            <h5 class="card-title">Consoles</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100 text-center">
+          <img src="images/banner-trick-out-your-build.jpg" class="card-img-top" alt="PC Components">
+          <div class="card-body">
+            <h5 class="card-title">PC Components</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100 text-center">
+          <img src="images/accesories.jpg" class="card-img-top" alt="Accessories">
+          <div class="card-body">
+            <h5 class="card-title">Accessories</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Top Games Section -->
+<section class="top-games py-5 bg-light">
+  <div class="container">
+    <h2 class="mb-4 text-center">Top Games</h2>
+    <div id="topGamesCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row g-3 justify-content-center">
+            <div class="col-md-3">
+              <div class="card">
+                <img src="images/lol.jpg" class="card-img-top" alt="LeagueOfLegends">
+                <div class="card-body text-center">
+                  <h5 class="card-title">League Of Legends</h5>
+                  <p class="card-text">$59.99</p>
+                  <a class="btn btn-dark btn-sm" (click)="handleButtonClick('/cart')">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="images/cs2.jpg" class="card-img-top" alt="Cs2">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Counter Strike 2</h5>
+                  <p class="card-text">$49.99</p>
+                  <a class="btn btn-dark btn-sm" (click)="handleButtonClick('/cart')">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add more carousel items for other top games -->
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#topGamesCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#topGamesCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Hardware & Accessories Highlight -->
+<section class="hardware py-5">
+  <div class="container">
+    <h2 class="mb-4 text-center">New Hardware & Accessories</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="images/laptop.jpg" class="card-img-top" alt="Laptop">
+          <div class="card-body text-center">
+            <h5 class="card-title">Gaming Laptop</h5>
+            <p class="card-text">$999.99</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="images/ps5.jpg" class="card-img-top" alt="Console">
+          <div class="card-body text-center">
+            <h5 class="card-title">Next-gen Console</h5>
+            <p class="card-text">$499.99</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="images/casti.jpg" class="card-img-top" alt="Headphones">
+          <div class="card-body text-center">
+            <h5 class="card-title">Gaming Headphones</h5>
+            <p class="card-text">$199.99</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Special Offers -->
+<section class="offers py-5 bg-light">
+  <div class="container">
+    <h2 class="mb-4 text-center">Special Offers</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card text-center p-3 bg-primary text-light">
+          <h4>20% Off Selected Games</h4>
+          <p>Limited time only!</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-center p-3 bg-success text-light">
+          <h4>Bundle Deal</h4>
+          <p>Console + Game for $399</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-center p-3 bg-danger text-light">
+          <h4>New Accessories</h4>
+          <p>Get the latest gaming gear!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials py-5">
+  <div class="container">
+    <h2 class="mb-4 text-center">What Our Gamers Say</h2>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner text-center">
+        <div class="carousel-item active">
+          <p class="lead">"Best gaming shop ever! Fast delivery and amazing prices."</p>
+          <h5>- John Doe</h5>
+        </div>
+        <div class="carousel-item">
+          <p class="lead">"Great selection of games and accessories!"</p>
+          <h5>- Jane Smith</h5>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter py-5 bg-dark text-light">
+  <div class="container text-center">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Get the latest deals and news first!</p>
+    <form class="d-flex justify-content-center mt-3">
+      <input type="email" class="form-control w-50 me-2" placeholder="Enter your email">
+      <button class="btn btn-primary">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-light py-4">
+  <div class="container text-center">
+    <p>&copy; 2025 GameStore. All rights reserved.</p>
+    <div>
+      <a href="#" class="text-light me-3">About</a>
+      <a href="#" class="text-light me-3">Contact</a>
+      <a href="#" class="text-light">Terms & Conditions</a>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,76 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Dark sleek theme */
+.nav-dark {
+  background: #0c0c0c;
+}
+
+/* Links */
+.shop-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+  .shop-link:hover {
+    color: white;
+  }
+
+/* Center logo style */
+.shop-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  letter-spacing: 4px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Hamburger menu */
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+  .menu-icon span {
+    width: 20px;
+    height: 2px;
+    background: white;
+  }
+
+/* Search input */
+.search-input {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: #fff;
+}
+
+  .search-input::placeholder {
+    color: #777;
+  }
+
+  .search-input:focus {
+    background: #1a1a1a;
+    border-color: #555;
+    color: #fff;
+    box-shadow: none;
+  }
+
+/* Dark dropdown menu */
+.dropdown-dark {
+  background: #151515;
+  border: 1px solid #333;
+}
+
+  .dropdown-dark .dropdown-item {
+    color: white;
+  }
+
+    .dropdown-dark .dropdown-item:hover {
+      background: #222;
+    }
