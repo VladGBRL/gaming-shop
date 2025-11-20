@@ -13,6 +13,7 @@ namespace Gaming_Shop.ShopManagement.Interfaces
         Task<bool> DeleteCategoryAsync(int id);
         Task<CategoryGetDTO?> UpdateCategoryAsync(int id, CategoryAddDTO dto);
         Task<CategoryGetDTO?> GetCategoryByIdAsync(int id);
-      
-    }
+        Task<List<CategoryGetDTO>> GetAllAsync();
+
+        }
 }

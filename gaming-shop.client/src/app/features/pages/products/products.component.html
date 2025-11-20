@@ -1,0 +1,146 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid mt-4">
+  <div class="row">
+
+    <!-- LEFT SIDEBAR FILTERS -->
+    <div class="col-md-3">
+      <div class="card shadow-sm h-100 p-3 position-sticky" style="top: 20px;">
+        <h5 class="mb-3">Filters</h5>
+
+        <!-- SEARCH BY PRODUCT NAME -->
+        <div class="mb-3">
+          <input type="text"
+                 class="form-control"
+                 placeholder="Search product by name..."
+                 [(ngModel)]="filters.search"
+                 (ngModelChange)="applyFilters()" />
+        </div>
+
+        <!-- FILTER BY SUPPLIER NAME -->
+        <div class="mb-3">
+          <select class="form-select"
+                  [(ngModel)]="filters.supplier"
+                  (change)="applyFilters()">
+            <option value="">All Suppliers</option>
+            <option *ngFor="let s of allSuppliers" [value]="s.supplierName">
+              {{ s.supplierName }}
+            </option>
+          </select>
+        </div>
+
+        <!-- FILTER BY CATEGORY NAME -->
+        <div class="mb-3">
+          <select class="form-select"
+                  [(ngModel)]="filters.category"
+                  (change)="applyFilters()">
+            <option value="">All Categories</option>
+            <option *ngFor="let c of allCategories" [value]="c.categoryName">
+              {{ c.categoryName }}
+            </option>
+          </select>
+        </div>
+
+        <!-- FILTER BY PRICE -->
+        <div class="mb-3 d-flex gap-2">
+          <input type="number" class="form-control" placeholder="Min Price" [(ngModel)]="filters.minPrice" (ngModelChange)="applyFilters()">
+          <input type="number" class="form-control" placeholder="Max Price" [(ngModel)]="filters.maxPrice" (ngModelChange)="applyFilters()">
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT PRODUCTS GRID -->
+    <div class="col-md-9">
+      <div class="row g-4">
+
+        <!-- ADD NEW PRODUCT CARD -->
+        <div class="col-md-3" *ngIf="isAdmin()">
+          <div class="card add-card text-center" (click)="openModal()">
+            <div class="card-body d-flex flex-column justify-content-center align-items-center">
+              <div class="plus-icon">+</div>
+              <h5 class="mt-2">Add Product</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- PRODUCT CARDS -->
+        <div class="col-md-3" *ngFor="let p of products">
+          <div class="card product-card">
+            <div class="card-body">
+              <h5 class="card-title">{{ p.name }}</h5>
+              <p class="text-muted">{{ p.description }}</p>
+
+              <p><strong>Price:</strong> ${{ p.price }}</p>
+              <p><strong>Stock:</strong> {{ p.stock }}</p>
+
+              <p><strong>Supplier:</strong> {{ p.supplierName }}</p>
+              <p><strong>Category:</strong> {{ p.categoryName }}</p>
+
+              <div class="d-flex justify-content-between mt-3" *ngIf="isAdmin()">
+                <button class="btn btn-primary btn-sm" (click)="openModal(p)">Edit</button>
+                <button class="btn btn-danger btn-sm" (click)="deleteProduct(p.productID)">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal fade" id="productModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">
+          {{ productForm.id ? 'Update Product' : 'Add Product' }}
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="mb-3">
+          <label>Name</label>
+          <input class="form-control" [(ngModel)]="productForm.name">
+        </div>
+
+        <div class="mb-3">
+          <label>Description</label>
+          <textarea class="form-control" [(ngModel)]="productForm.description"></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label>Price</label>
+          <input type="number" class="form-control" [(ngModel)]="productForm.price">
+        </div>
+
+        <div class="mb-3">
+          <label>Stock</label>
+          <input type="number" class="form-control" [(ngModel)]="productForm.stock">
+        </div>
+
+        <div class="mb-3">
+          <label>Supplier ID</label>
+          <input type="number" class="form-control" [(ngModel)]="productForm.supplierID">
+        </div>
+
+        <div class="mb-3">
+          <label>Category ID</label>
+          <input type="number" class="form-control" [(ngModel)]="productForm.categoryID">
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button class="btn btn-success" (click)="saveProduct()">Save</button>
+      </div>
+
+    </div>
+  </div>
+</div>

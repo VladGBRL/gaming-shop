@@ -13,5 +13,8 @@ namespace Gaming_Shop.ShopManagement.Interfaces
         Task<bool> DeleteProductsAsync(int id_Product);
         Task<ProductGetDTO> UpdateProductsAsync(int id_Product, ProductAddDTO productDto);
         Task<ProductGetDTO> GetProductByIdAsync(int id);
+        Task<List<ProductGetDTO>> GetAllAsync();
+        Task<List<ProductGetDTO>> SearchAsync(string? query);
+        Task<List<ProductGetDTO>> FilterAsync(decimal? minPrice, decimal? maxPrice, string? categoryName, string? supplierName);
     }
 }

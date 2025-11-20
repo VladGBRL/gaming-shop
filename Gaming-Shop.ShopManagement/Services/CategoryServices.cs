@@ -68,5 +68,16 @@ namespace Gaming_Shop.ShopManagement.Services
                 CategoryName = category.CategoryName
             };
         }
+        public async Task<List<CategoryGetDTO>> GetAllAsync()
+        {
+            return await _context.Categories
+                .Select(c => new CategoryGetDTO
+                {
+                    CategoryID = c.CategoryID,
+                    CategoryName = c.CategoryName
+                })
+                .ToListAsync();
+        }
+
     }
 }

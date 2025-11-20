@@ -9,6 +9,8 @@ import { LoginComponent } from './features/pages/login/login.component';
 import { RegisterComponent } from './features/pages/register/register.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HomeComponent } from './features/pages/home/home.component';
+import { ProductsComponent } from './features/pages/products/products.component';
+import { AdminDashboardComponent } from './features/pages/admin-dashboard/admin-dashboard.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { HomeComponent } from './features/pages/home/home.component';
     NavbarComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    ProductsComponent,
+    AdminDashboardComponent
   ],
   imports: [
     BrowserModule,

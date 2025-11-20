@@ -79,5 +79,18 @@ namespace Gaming_Shop.ShopManagement.Services
                 Address = supplier.Address
             };
         }
+        public async Task<List<SupplierGetDTO>> GetAllAsync()
+        {
+            return await _context.Suppliers
+                .Select(s => new SupplierGetDTO
+                {
+                    SupplierID = s.SupplierID,
+                    SupplierName = s.SupplierName,
+                    Contact = s.Contact,
+                    Address = s.Address
+                })
+                .ToListAsync();
+        }
+
     }
 }

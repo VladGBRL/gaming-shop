@@ -11,38 +11,7 @@
 
     <!-- Main Links -->
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mx-auto">
-
-        <!-- Only show if user is logged in -->
-        <ng-container *ngIf="auth.currentUser()">
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="#" (click)="$event.preventDefault();">Games</a>
-          </li>
-
-          <li class="nav-item dropdown mx-2">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-              Hardware
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#"(click)="$event.preventDefault();">Consoles</a></li>
-              <li><a class="dropdown-item" href="#"(click)="$event.preventDefault();">PC Components</a></li>
-              <li><a class="dropdown-item" href="#"(click)="$event.preventDefault();">Laptops</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item dropdown mx-2">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" >
-              Accessories
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#" (click)="$event.preventDefault();">Headphones</a></li>
-              <li><a class="dropdown-item" href="#" (click)="$event.preventDefault();">Keyboards</a></li>
-              <li><a class="dropdown-item" href="#" (click)="$event.preventDefault();">Mice</a></li>
-            </ul>
-          </li>
-        </ng-container>
-
-      </ul>
+     
 
       <!-- Right side -->
       <ul class="navbar-nav ms-auto">
@@ -50,7 +19,11 @@
         <!-- Logged in links -->
         <ng-container *ngIf="auth.currentUser()">
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#" (click)="$event.preventDefault();">Search</a>
+            <a class="nav-link" [routerLink]="['/products']" (click)="$event.preventDefault();">Shop Now</a>
+          </li>
+
+          <li class="nav-item mx-2" *ngIf="isAdmin()">
+            <a class="nav-link" [routerLink]="['/admin-dashboard']" (click)="$event.preventDefault();">Admin Dashboard</a>
           </li>
 
           <li class="nav-item mx-2">
