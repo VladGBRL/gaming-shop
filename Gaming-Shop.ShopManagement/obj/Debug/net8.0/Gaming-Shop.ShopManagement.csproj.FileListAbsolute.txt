@@ -1,0 +1,13 @@
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.ShopManagement\obj\Debug\net8.0\Gaming-Shop.ShopManagement.csproj.AssemblyReference.cache
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.ShopManagement\obj\Debug\net8.0\Gaming-Shop.ShopManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.ShopManagement\obj\Debug\net8.0\Gaming-Shop.ShopManagement.AssemblyInfoInputs.cache
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.ShopManagement\obj\Debug\net8.0\Gaming-Shop.ShopManagement.AssemblyInfo.cs
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.ShopManagement\obj\Debug\net8.0\Gaming-Shop.ShopManagement.csproj.CoreCompileInputs.cache
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.ShopManagement\obj\Debug\net8.0\Gaming-Shop.ShopManagement.sourcelink.json
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.ShopManagement\bin\Debug\net8.0\Gaming-Shop.ShopManagement.deps.json
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.ShopManagement\bin\Debug\net8.0\Gaming-Shop.ShopManagement.dll
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.ShopManagement\bin\Debug\net8.0\Gaming-Shop.ShopManagement.pdb
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.ShopManagement\obj\Debug\net8.0\Gaming-Shop.ShopManagement.dll
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.ShopManagement\obj\Debug\net8.0\refint\Gaming-Shop.ShopManagement.dll
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.ShopManagement\obj\Debug\net8.0\Gaming-Shop.ShopManagement.pdb
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.ShopManagement\obj\Debug\net8.0\ref\Gaming-Shop.ShopManagement.dll

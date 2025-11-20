@@ -28,6 +28,7 @@
     <ProjectReference Include="..\gaming-shop.client\gaming-shop.client.esproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+    <ProjectReference Include="..\Gaming-Shop.ShopManagement\Gaming-Shop.ShopManagement.csproj" />
   </ItemGroup>
 
 </Project>

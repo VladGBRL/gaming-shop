@@ -13,6 +13,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AccountManagement", "Accoun
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gaming-Shop.AccountManagement", "Gaming-Shop.AccountManagement\Gaming-Shop.AccountManagement.csproj", "{ECE24DC8-F58E-440A-8B67-1DAC0CD2E621}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShopManagement", "ShopManagement", "{D1CCE767-70AE-4241-8471-FA7BC6605359}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gaming-Shop.ShopManagement", "Gaming-Shop.ShopManagement\Gaming-Shop.ShopManagement.csproj", "{AF12A7C4-F7CB-49D4-9DBF-9E153FE67215}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,10 @@ Global
 		{ECE24DC8-F58E-440A-8B67-1DAC0CD2E621}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECE24DC8-F58E-440A-8B67-1DAC0CD2E621}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECE24DC8-F58E-440A-8B67-1DAC0CD2E621}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF12A7C4-F7CB-49D4-9DBF-9E153FE67215}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF12A7C4-F7CB-49D4-9DBF-9E153FE67215}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF12A7C4-F7CB-49D4-9DBF-9E153FE67215}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF12A7C4-F7CB-49D4-9DBF-9E153FE67215}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,6 +48,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{1E6720E2-7A4B-4B94-8477-0845B9D0584F} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{ECE24DC8-F58E-440A-8B67-1DAC0CD2E621} = {1E6720E2-7A4B-4B94-8477-0845B9D0584F}
+		{D1CCE767-70AE-4241-8471-FA7BC6605359} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{AF12A7C4-F7CB-49D4-9DBF-9E153FE67215} = {D1CCE767-70AE-4241-8471-FA7BC6605359}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7C0EC28E-780B-444A-8AB0-D8A5C613C5EB}
