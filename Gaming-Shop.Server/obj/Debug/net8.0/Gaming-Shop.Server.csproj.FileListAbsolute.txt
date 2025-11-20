@@ -157,3 +157,5 @@ C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\bin\Debug\net8.0\
 C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\obj\Debug\net8.0\Gaming-Shop.Server.sourcelink.json
 C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\bin\Debug\net8.0\AutoMapper.dll
 C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\bin\Debug\net8.0\Gaming-Shop.ShopManagement.dll
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\bin\Debug\net8.0\Gaming-Shop.ShopManagement.pdb

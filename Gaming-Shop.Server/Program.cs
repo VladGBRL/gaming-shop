@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Gaming_Shop.AccountManagement.Helpers;
+using Gaming_Shop.ShopManagement.Data;
+using Gaming_Shop.ShopManagement;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -58,8 +60,11 @@ builder.Services.AddAuthorization(options =>
 
 builder.Services.AddDbContext<AccountManagementDbContext>(options =>
     options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<ShopManagementDbContext>(options =>
+    options.UseSqlServer(connectionString));
 
 builder.Services.AddAccountManagementModule(builder.Configuration);
+builder.Services.AddShopManagementModule();
 
 
 builder.Services.AddControllers();

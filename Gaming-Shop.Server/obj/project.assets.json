@@ -1672,6 +1672,19 @@
         "runtime": {
           "bin/placeholder/Gaming-Shop.AccountManagement.dll": {}
         }
+      },
+      "Gaming-Shop.ShopManagement/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.10"
+        },
+        "compile": {
+          "bin/placeholder/Gaming-Shop.ShopManagement.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Gaming-Shop.ShopManagement.dll": {}
+        }
       }
     }
   },
@@ -4438,11 +4451,17 @@
       "type": "project",
       "path": "../Gaming-Shop.AccountManagement/Gaming-Shop.AccountManagement.csproj",
       "msbuildProject": "../Gaming-Shop.AccountManagement/Gaming-Shop.AccountManagement.csproj"
+    },
+    "Gaming-Shop.ShopManagement/1.0.0": {
+      "type": "project",
+      "path": "../Gaming-Shop.ShopManagement/Gaming-Shop.ShopManagement.csproj",
+      "msbuildProject": "../Gaming-Shop.ShopManagement/Gaming-Shop.ShopManagement.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Gaming-Shop.AccountManagement >= 1.0.0",
+      "Gaming-Shop.ShopManagement >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.10",
       "Microsoft.AspNetCore.SpaProxy >= 8.*-*",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.10",
@@ -4485,6 +4504,9 @@
           "projectReferences": {
             "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.AccountManagement\\Gaming-Shop.AccountManagement.csproj": {
               "projectPath": "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.AccountManagement\\Gaming-Shop.AccountManagement.csproj"
+            },
+            "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.ShopManagement\\Gaming-Shop.ShopManagement.csproj": {
+              "projectPath": "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.ShopManagement\\Gaming-Shop.ShopManagement.csproj"
             }
           }
         }
