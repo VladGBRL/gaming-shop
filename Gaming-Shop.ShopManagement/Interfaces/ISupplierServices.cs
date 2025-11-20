@@ -13,5 +13,6 @@ namespace Gaming_Shop.ShopManagement.Interfaces
         Task<bool> DeleteSupplierAsync(int id);
         Task<SupplierGetDTO?> UpdateSupplierAsync(int id, SupplierAddDTO dto);
         Task<SupplierGetDTO?> GetSupplierByIdAsync(int id);
+        Task<List<SupplierGetDTO>> GetAllAsync();
     }
 }

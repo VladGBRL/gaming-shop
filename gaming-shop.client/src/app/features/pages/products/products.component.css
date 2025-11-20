@@ -1,0 +1,20 @@
+.add-card {
+  border: 2px dashed #6c757d;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+  .add-card:hover {
+    background-color: #f8f9fa;
+  }
+
+.plus-icon {
+  font-size: 48px;
+  font-weight: bold;
+  color: #6c757d;
+}
+
+.product-card {
+  min-height: 320px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}

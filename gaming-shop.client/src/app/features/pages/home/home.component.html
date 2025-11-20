@@ -5,7 +5,7 @@
   <div class="container">
     <h1 class="display-4 fw-bold mb-3">Discover the Latest Games & Hardware!</h1>
     <p class="lead mb-4">Shop top games, consoles, and gaming accessories</p>
-    <a class="btn btn-primary btn-lg" (click)="handleButtonClick('/home')">Shop Now</a>
+    <a class="btn btn-primary btn-lg" (click)="handleButtonClick('/products')">Shop Now</a>
   </div>
 </section>
 
@@ -64,7 +64,7 @@
                 <div class="card-body text-center">
                   <h5 class="card-title">League Of Legends</h5>
                   <p class="card-text">$59.99</p>
-                  <a class="btn btn-dark btn-sm" (click)="handleButtonClick('/cart')">Add to Cart</a>
+                  <a class="btn btn-dark btn-sm" (click)="handleButtonClick('/products')">See more</a>
                 </div>
               </div>
             </div>
@@ -74,7 +74,7 @@
                 <div class="card-body text-center">
                   <h5 class="card-title">Counter Strike 2</h5>
                   <p class="card-text">$49.99</p>
-                  <a class="btn btn-dark btn-sm" (click)="handleButtonClick('/cart')">Add to Cart</a>
+                  <a class="btn btn-dark btn-sm" (click)="handleButtonClick('/products')">See more</a>
                 </div>
               </div>
             </div>
@@ -179,27 +179,9 @@
     </div>
   </div>
 </section>
-
-<!-- Newsletter -->
-<section class="newsletter py-5 bg-dark text-light">
-  <div class="container text-center">
-    <h2>Subscribe to Our Newsletter</h2>
-    <p>Get the latest deals and news first!</p>
-    <form class="d-flex justify-content-center mt-3">
-      <input type="email" class="form-control w-50 me-2" placeholder="Enter your email">
-      <button class="btn btn-primary">Subscribe</button>
-    </form>
-  </div>
-</section>
-
 <!-- Footer -->
 <footer class="bg-dark text-light py-4">
   <div class="container text-center">
     <p>&copy; 2025 GameStore. All rights reserved.</p>
-    <div>
-      <a href="#" class="text-light me-3">About</a>
-      <a href="#" class="text-light me-3">Contact</a>
-      <a href="#" class="text-light">Terms & Conditions</a>
-    </div>
   </div>
 </footer>
