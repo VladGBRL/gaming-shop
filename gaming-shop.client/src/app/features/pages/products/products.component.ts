@@ -4,7 +4,7 @@ import { ProductModel } from '../../../models/ProductModel';
 import { AuthService } from '../../../services/auth.service';
 import { SuppliersService } from '../../../services/suppliers.service';
 import { CategoryService } from '../../../services/category.service';
-
+import { WishlistService } from '../../../services/wishlist.service';
 
 declare var bootstrap: any;
 
@@ -39,38 +39,91 @@ export class ProductsComponent implements OnInit {
     categoryID: 0
   };
 
+  token: string = '';
+  userId: number | null = null;
+
   constructor(
     private productService: ProductService,
     private supplierService: SuppliersService,
     private categoryService: CategoryService,
+    private wishlistService: WishlistService,
     public auth: AuthService
   ) { }
 
   ngOnInit(): void {
-    this.loadProducts();
-    this.loadSuppliers();
-    this.loadCategories();
+    const token = this.auth.getToken();
+    if (!token) {
+      console.error('No JWT token found!');
+      return;
+    }
+    this.token = token;
+
+    // Load everything only after we have userId
+    this.auth.getUserId().subscribe(id => {
+      this.userId = id;
+      this.loadProducts();
+      this.loadSuppliers();
+      this.loadCategories();
+    });
   }
 
   // LOAD PRODUCTS
   loadProducts() {
     this.productService.getAll().subscribe(res => {
-      this.originalProducts = res;
-      this.products = res;
+      // Initialize inWishlist to false
+      this.originalProducts = res.map(p => ({ ...p, inWishlist: false }));
+      this.products = [...this.originalProducts];
+      this.loadWishlist();
+    }, err => {
+      console.error('Failed to load products', err);
     });
+  }
+
+  // LOAD WISHLIST AND MARK PRODUCTS
+  loadWishlist() {
+    if (!this.userId) return;
+
+    this.wishlistService.getWishlist(this.userId, this.token).subscribe({
+      next: wishlist => {
+        const wishlistIds = wishlist.items.map(i => i.productId);
+        this.products.forEach(p => p.inWishlist = wishlistIds.includes(p.productID));
+      },
+      error: err => console.error('Failed to load wishlist', err)
+    });
+  }
+
+  // TOGGLE WISHLIST
+  toggleWishlist(product: ProductModel) {
+    if (!this.userId) return;
+
+    if (product.inWishlist) {
+      this.wishlistService.removeFromWishlist(this.userId, product.productID, this.token)
+        .subscribe({
+          next: () => product.inWishlist = false,
+          error: err => console.error('Failed to remove from wishlist', err)
+        });
+    } else {
+      this.wishlistService.addToWishlist(this.userId, product.productID, this.token)
+        .subscribe({
+          next: () => product.inWishlist = true,
+          error: err => console.error('Failed to add to wishlist', err)
+        });
+    }
   }
 
   // LOAD SUPPLIERS (for filters)
   loadSuppliers() {
-    this.supplierService.getAll().subscribe(res => {
-      this.allSuppliers = res;
+    this.supplierService.getAll().subscribe({
+      next: res => this.allSuppliers = res,
+      error: err => console.error('Failed to load suppliers', err)
     });
   }
 
   // LOAD CATEGORIES (for filters)
   loadCategories() {
-    this.categoryService.getAll().subscribe(res => {
-      this.allCategories = res;
+    this.categoryService.getAll().subscribe({
+      next: res => this.allCategories = res,
+      error: err => console.error('Failed to load categories', err)
     });
   }
 
@@ -102,7 +155,6 @@ export class ProductsComponent implements OnInit {
     });
   }
 
-
   // OPEN MODAL
   openModal(p?: ProductModel) {
     this.productForm = p
@@ -133,11 +185,11 @@ export class ProductsComponent implements OnInit {
     if (this.productForm.id) {
       this.productService
         .update(this.productForm.id, this.productForm)
-        .subscribe(() => this.loadProducts());
+        .subscribe(() => this.loadProducts(), err => console.error('Failed to update product', err));
     } else {
       this.productService
         .create(this.productForm)
-        .subscribe(() => this.loadProducts());
+        .subscribe(() => this.loadProducts(), err => console.error('Failed to create product', err));
     }
 
     bootstrap.Modal.getInstance(document.getElementById('productModal')).hide();
@@ -145,7 +197,7 @@ export class ProductsComponent implements OnInit {
 
   // DELETE PRODUCT
   deleteProduct(id: number) {
-    this.productService.delete(id).subscribe(() => this.loadProducts());
+    this.productService.delete(id).subscribe(() => this.loadProducts(), err => console.error('Failed to delete product', err));
   }
 
   // CHECK ADMIN

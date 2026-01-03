@@ -1685,6 +1685,22 @@
         "runtime": {
           "bin/placeholder/Gaming-Shop.ShopManagement.dll": {}
         }
+      },
+      "Gaming-Shop.WishlistManagement/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Gaming-Shop.AccountManagement": "1.0.0",
+          "Gaming-Shop.ShopManagement": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.10"
+        },
+        "compile": {
+          "bin/placeholder/Gaming-Shop.WishlistManagement.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Gaming-Shop.WishlistManagement.dll": {}
+        }
       }
     }
   },
@@ -4456,12 +4472,18 @@
       "type": "project",
       "path": "../Gaming-Shop.ShopManagement/Gaming-Shop.ShopManagement.csproj",
       "msbuildProject": "../Gaming-Shop.ShopManagement/Gaming-Shop.ShopManagement.csproj"
+    },
+    "Gaming-Shop.WishlistManagement/1.0.0": {
+      "type": "project",
+      "path": "../Gaming-Shop.WishlistManagement/Gaming-Shop.WishlistManagement.csproj",
+      "msbuildProject": "../Gaming-Shop.WishlistManagement/Gaming-Shop.WishlistManagement.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Gaming-Shop.AccountManagement >= 1.0.0",
       "Gaming-Shop.ShopManagement >= 1.0.0",
+      "Gaming-Shop.WishlistManagement >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.10",
       "Microsoft.AspNetCore.SpaProxy >= 8.*-*",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.10",
@@ -4507,6 +4529,9 @@
             },
             "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.ShopManagement\\Gaming-Shop.ShopManagement.csproj": {
               "projectPath": "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.ShopManagement\\Gaming-Shop.ShopManagement.csproj"
+            },
+            "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.WishlistManagement\\Gaming-Shop.WishlistManagement.csproj": {
+              "projectPath": "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.WishlistManagement\\Gaming-Shop.WishlistManagement.csproj"
             }
           }
         }

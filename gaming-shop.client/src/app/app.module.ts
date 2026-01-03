@@ -11,6 +11,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HomeComponent } from './features/pages/home/home.component';
 import { ProductsComponent } from './features/pages/products/products.component';
 import { AdminDashboardComponent } from './features/pages/admin-dashboard/admin-dashboard.component';
+import { WishlistComponent } from './features/pages/wishlist/wishlist.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { AdminDashboardComponent } from './features/pages/admin-dashboard/admin-
     RegisterComponent,
     HomeComponent,
     ProductsComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    WishlistComponent
   ],
   imports: [
     BrowserModule,
