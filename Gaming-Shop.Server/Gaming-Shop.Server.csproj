@@ -29,6 +29,7 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="..\Gaming-Shop.ShopManagement\Gaming-Shop.ShopManagement.csproj" />
+    <ProjectReference Include="..\Gaming-Shop.WishlistManagement\Gaming-Shop.WishlistManagement.csproj" />
   </ItemGroup>
 
 </Project>

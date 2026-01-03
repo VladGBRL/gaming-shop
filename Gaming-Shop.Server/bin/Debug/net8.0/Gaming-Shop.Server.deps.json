@@ -10,6 +10,7 @@
         "dependencies": {
           "Gaming-Shop.AccountManagement": "1.0.0",
           "Gaming-Shop.ShopManagement": "1.0.0",
+          "Gaming-Shop.WishlistManagement": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.10",
           "Microsoft.AspNetCore.SpaProxy": "8.0.22",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.10",
@@ -1030,6 +1031,20 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "Gaming-Shop.WishlistManagement/1.0.0": {
+        "dependencies": {
+          "Gaming-Shop.AccountManagement": "1.0.0",
+          "Gaming-Shop.ShopManagement": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.10"
+        },
+        "runtime": {
+          "Gaming-Shop.WishlistManagement.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -1640,6 +1655,11 @@
       "sha512": ""
     },
     "Gaming-Shop.ShopManagement/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Gaming-Shop.WishlistManagement/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
