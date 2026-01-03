@@ -18,7 +18,6 @@ C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\obj\Debug\net8.0\
 C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\obj\Debug\net8.0\Gaming-Shop.Server.AssemblyInfoInputs.cache
 C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\obj\Debug\net8.0\Gaming-Shop.Server.AssemblyInfo.cs
 C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\obj\Debug\net8.0\Gaming-Shop.Server.csproj.CoreCompileInputs.cache
-C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\obj\Debug\net8.0\Gaming-Shop.Server.MvcApplicationPartsAssemblyInfo.cs
 C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\obj\Debug\net8.0\Gaming-Shop.Server.MvcApplicationPartsAssemblyInfo.cache
 C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\obj\Debug\net8.0\scopedcss\bundle\Gaming-Shop.Server.styles.css
 C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\obj\Debug\net8.0\staticwebassets.build.json
@@ -159,3 +158,6 @@ C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\bin\Debug\net8.0\
 C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\bin\Debug\net8.0\Gaming-Shop.ShopManagement.dll
 C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\bin\Debug\net8.0\Gaming-Shop.ShopManagement.pdb
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\bin\Debug\net8.0\Gaming-Shop.WishlistManagement.dll
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\bin\Debug\net8.0\Gaming-Shop.WishlistManagement.pdb
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\Gaming-Shop.Server\obj\Debug\net8.0\Gaming-Shop.Server.MvcApplicationPartsAssemblyInfo.cs

@@ -10,4 +10,6 @@ export interface ProductModel {
 
   categoryID: number;
   categoryName: string;
+
+  inWishlist?: boolean;
 }

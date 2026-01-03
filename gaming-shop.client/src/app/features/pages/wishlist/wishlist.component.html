@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+<div class="container mt-4">
+  <h3>My Wishlist</h3>
+
+  <table class="table table-bordered mt-3" *ngIf="wishlist.length > 0; else empty">
+    <thead class="table-light">
+      <tr>
+        <th>Name</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of wishlist">
+        <td>{{ item.name }}</td>
+        <td>
+          <button class="btn btn-danger btn-sm" (click)="deleteFromWishlist(item.productId)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #empty>
+    <p>You have no items in your wishlist.</p>
+  </ng-template>
+</div>
