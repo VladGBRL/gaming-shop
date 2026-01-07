@@ -84,6 +84,93 @@
         }
       }
     },
+    "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.CartManagement\\Gaming-Shop.CartManagement.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.CartManagement\\Gaming-Shop.CartManagement.csproj",
+        "projectName": "Gaming-Shop.CartManagement",
+        "projectPath": "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.CartManagement\\Gaming-Shop.CartManagement.csproj",
+        "packagesPath": "C:\\Users\\bilav.DESKTOP-CE6DUR4\\.nuget\\packages\\",
+        "outputPath": "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.CartManagement\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\bilav.DESKTOP-CE6DUR4\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.AccountManagement\\Gaming-Shop.AccountManagement.csproj": {
+                "projectPath": "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.AccountManagement\\Gaming-Shop.AccountManagement.csproj"
+              },
+              "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.ShopManagement\\Gaming-Shop.ShopManagement.csproj": {
+                "projectPath": "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.ShopManagement\\Gaming-Shop.ShopManagement.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.Server\\Gaming-Shop.Server.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -116,11 +203,17 @@
               "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.AccountManagement\\Gaming-Shop.AccountManagement.csproj": {
                 "projectPath": "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.AccountManagement\\Gaming-Shop.AccountManagement.csproj"
               },
+              "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.CartManagement\\Gaming-Shop.CartManagement.csproj": {
+                "projectPath": "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.CartManagement\\Gaming-Shop.CartManagement.csproj"
+              },
               "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.ShopManagement\\Gaming-Shop.ShopManagement.csproj": {
                 "projectPath": "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.ShopManagement\\Gaming-Shop.ShopManagement.csproj"
               },
               "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.WishlistManagement\\Gaming-Shop.WishlistManagement.csproj": {
                 "projectPath": "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.WishlistManagement\\Gaming-Shop.WishlistManagement.csproj"
+              },
+              "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\PaymentManagement\\Gaming-Shop.PaymentManagement.csproj": {
+                "projectPath": "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\PaymentManagement\\Gaming-Shop.PaymentManagement.csproj"
               }
             }
           }
@@ -158,6 +251,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.10, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[50.1.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -320,6 +417,90 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\PaymentManagement\\Gaming-Shop.PaymentManagement.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\PaymentManagement\\Gaming-Shop.PaymentManagement.csproj",
+        "projectName": "Gaming-Shop.PaymentManagement",
+        "projectPath": "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\PaymentManagement\\Gaming-Shop.PaymentManagement.csproj",
+        "packagesPath": "C:\\Users\\bilav.DESKTOP-CE6DUR4\\.nuget\\packages\\",
+        "outputPath": "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\PaymentManagement\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\bilav.DESKTOP-CE6DUR4\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.CartManagement\\Gaming-Shop.CartManagement.csproj": {
+                "projectPath": "C:\\ProiecteFacultate\\Proiect-CE\\Gaming-Shop\\Gaming-Shop.CartManagement\\Gaming-Shop.CartManagement.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[50.1.0, )"
             }
           },
           "imports": [

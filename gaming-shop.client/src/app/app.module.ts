@@ -12,6 +12,10 @@ import { HomeComponent } from './features/pages/home/home.component';
 import { ProductsComponent } from './features/pages/products/products.component';
 import { AdminDashboardComponent } from './features/pages/admin-dashboard/admin-dashboard.component';
 import { WishlistComponent } from './features/pages/wishlist/wishlist.component';
+import { CartComponent } from './features/pages/cart/cart.component';
+import { SuccessComponent } from './features/pages/success/success.component';
+import { CancelComponent } from './features/pages/cancel/cancel.component';
+import { HistoryComponent } from './features/pages/history/history.component';
 
 
 @NgModule({
@@ -23,7 +27,11 @@ import { WishlistComponent } from './features/pages/wishlist/wishlist.component'
     HomeComponent,
     ProductsComponent,
     AdminDashboardComponent,
-    WishlistComponent
+    WishlistComponent,
+    CartComponent,
+    SuccessComponent,
+    CancelComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,

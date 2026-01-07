@@ -20,16 +20,19 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Stripe.net" Version="50.1.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Gaming-Shop.AccountManagement\Gaming-Shop.AccountManagement.csproj" />
+    <ProjectReference Include="..\Gaming-Shop.CartManagement\Gaming-Shop.CartManagement.csproj" />
     <ProjectReference Include="..\gaming-shop.client\gaming-shop.client.esproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="..\Gaming-Shop.ShopManagement\Gaming-Shop.ShopManagement.csproj" />
     <ProjectReference Include="..\Gaming-Shop.WishlistManagement\Gaming-Shop.WishlistManagement.csproj" />
+    <ProjectReference Include="..\PaymentManagement\Gaming-Shop.PaymentManagement.csproj" />
   </ItemGroup>
 
 </Project>

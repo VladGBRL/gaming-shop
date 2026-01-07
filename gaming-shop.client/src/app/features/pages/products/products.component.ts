@@ -5,6 +5,7 @@ import { AuthService } from '../../../services/auth.service';
 import { SuppliersService } from '../../../services/suppliers.service';
 import { CategoryService } from '../../../services/category.service';
 import { WishlistService } from '../../../services/wishlist.service';
+import { CartService } from '../../../services/cart.service';
 
 declare var bootstrap: any;
 
@@ -47,6 +48,7 @@ export class ProductsComponent implements OnInit {
     private supplierService: SuppliersService,
     private categoryService: CategoryService,
     private wishlistService: WishlistService,
+    private cartService: CartService,
     public auth: AuthService
   ) { }
 
@@ -203,5 +205,25 @@ export class ProductsComponent implements OnInit {
   // CHECK ADMIN
   isAdmin(): boolean {
     return this.auth.isUserAdmin();
+  }
+
+  addToCart(product: ProductModel) {
+    if (!this.userId) return;
+
+    this.cartService.addToCart(
+      this.userId,
+      {
+        productId: product.productID,
+        quantity: 1
+      },
+      this.token
+    ).subscribe({
+      next: () => {
+        console.log('Product added to cart');
+      },
+      error: err => {
+        console.error('Failed to add product to cart', err);
+      }
+    });
   }
 }

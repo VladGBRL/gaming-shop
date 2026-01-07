@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { WishlistService } from '../../../services/wishlist.service';
 import { AuthService } from '../../../services/auth.service';
 import { WishlistItem } from '../../../models/WishlistItem';
+import { CartService } from '../../../services/cart.service';
+import { ProductModel } from '../../../models/ProductModel';
 
 @Component({
   selector: 'app-wishlist',
@@ -16,7 +18,8 @@ export class WishlistComponent implements OnInit {
 
   constructor(
     private wishlistService: WishlistService,
-    private auth: AuthService
+    private auth: AuthService,
+    private cartService: CartService,
   ) { }
 
   ngOnInit(): void {
@@ -48,4 +51,27 @@ export class WishlistComponent implements OnInit {
         this.wishlist = this.wishlist.filter(p => p.productId !== productId);
       });
   }
+  addToCart(item: WishlistItem) {
+    if (!this.userId) return;
+
+    this.cartService.addToCart(
+      this.userId,
+      {
+        productId: item.productId,
+        quantity: 1
+      },
+      this.token
+    ).subscribe({
+      next: () => {
+        console.log('Product added to cart');
+
+        // OPTIONAL: remove from wishlist after adding to cart
+        this.deleteFromWishlist(item.productId);
+      },
+      error: err => {
+        console.error('Failed to add product to cart', err);
+      }
+    });
+  }
+
 }
