@@ -31,7 +31,10 @@
           </li>
 
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#" (click)="$event.preventDefault();">Cart</a>
+            <a class="nav-link" [routerLink]="['/cart']" (click)="$event.preventDefault();">Cart</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" [routerLink]="['/history']" (click)="$event.preventDefault();">History</a>
           </li>
 
           <!-- User dropdown -->

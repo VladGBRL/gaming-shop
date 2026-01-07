@@ -12,13 +12,22 @@
     <tbody>
       <tr *ngFor="let item of wishlist">
         <td>{{ item.name }}</td>
-        <td>
-          <button class="btn btn-danger btn-sm" (click)="deleteFromWishlist(item.productId)">
+        <td class="d-flex gap-2">
+
+          <button class="btn btn-danger btn-sm"
+                  (click)="deleteFromWishlist(item.productId)">
             Delete
           </button>
+
+          <button class="btn btn-success btn-sm"
+                  (click)="addToCart(item)">
+            Add to Cart
+          </button>
+
         </td>
       </tr>
     </tbody>
+
   </table>
 
   <ng-template #empty>

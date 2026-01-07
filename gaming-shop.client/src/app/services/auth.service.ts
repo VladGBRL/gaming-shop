@@ -15,7 +15,10 @@ export class AuthService {
   private tokenKey = 'token';
   private userKey = 'user';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    const storedUser = localStorage.getItem(this.userKey) || sessionStorage.getItem(this.userKey);
+    if (storedUser) this.currentUser.set(JSON.parse(storedUser));
+}
 
   login(login: LoginModel): Observable<UserModel> {
     return this.http.post<UserModel>(this.apiUrl + '/Login', login).pipe(
