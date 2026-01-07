@@ -75,13 +75,24 @@
 
               <p><strong>Supplier:</strong> {{ p.supplierName }}</p>
               <p><strong>Category:</strong> {{ p.categoryName }}</p>
-              <div class="wishlist-btn mb-2">
+              <div class="d-flex flex-column gap-2 mb-2">
+
+                <!-- WISHLIST -->
                 <button class="btn"
                         [ngClass]="p.inWishlist ? 'btn-danger' : 'btn-outline-primary'"
                         (click)="toggleWishlist(p)">
                   {{ p.inWishlist ? 'Remove from Wishlist' : 'Add to Wishlist' }}
                 </button>
+
+                <!-- ADD TO CART -->
+                <button class="btn btn-success"
+                        [disabled]="p.stock === 0"
+                        (click)="addToCart(p)">
+                  Add to Cart
+                </button>
+
               </div>
+
 
               <div class="d-flex justify-content-between mt-3" *ngIf="isAdmin()">
                 <button class="btn btn-primary btn-sm" (click)="openModal(p)">Edit</button>

@@ -1,0 +1,13 @@
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\PaymentManagement\obj\Debug\net8.0\PaymentManagement.csproj.AssemblyReference.cache
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\PaymentManagement\obj\Debug\net8.0\PaymentManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\PaymentManagement\obj\Debug\net8.0\PaymentManagement.AssemblyInfoInputs.cache
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\PaymentManagement\obj\Debug\net8.0\PaymentManagement.AssemblyInfo.cs
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\PaymentManagement\obj\Debug\net8.0\PaymentManagement.csproj.CoreCompileInputs.cache
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\PaymentManagement\obj\Debug\net8.0\PaymentManagement.sourcelink.json
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\PaymentManagement\bin\Debug\net8.0\PaymentManagement.deps.json
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\PaymentManagement\bin\Debug\net8.0\PaymentManagement.dll
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\PaymentManagement\bin\Debug\net8.0\PaymentManagement.pdb
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\PaymentManagement\obj\Debug\net8.0\PaymentManagement.dll
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\PaymentManagement\obj\Debug\net8.0\refint\PaymentManagement.dll
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\PaymentManagement\obj\Debug\net8.0\PaymentManagement.pdb
+C:\ProiecteFacultate\Proiect-CE\Gaming-Shop\PaymentManagement\obj\Debug\net8.0\ref\PaymentManagement.dll

@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+<div class="container mt-4">
+  <h3>My Purchase History</h3>
+
+  <div *ngIf="loading" class="text-center mt-3">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <ng-container *ngIf="!loading && payments.length > 0; else noHistory">
+    <table class="table table-bordered mt-3">
+      <thead class="table-light">
+        <tr>
+          <th>Payment ID</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Total Amount</th>
+          <th>Items</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let payment of payments">
+          <td>{{ payment.id }}</td>
+          <td>{{ payment.createdAt | date:'short' }}</td>
+          <td>{{ payment.status }}</td>
+          <td>{{ payment.totalAmount | currency:'RON' }}</td>
+          <td>
+            <ul class="mb-0">
+              <li *ngFor="let item of payment.items">
+                {{ item.productName }} x {{ item.quantity }} ({{ item.unitPrice | currency:'RON' }})
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+
+  <ng-template #noHistory>
+    <p>You have not made any purchases yet.</p>
+  </ng-template>
+</div>

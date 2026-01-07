@@ -12,10 +12,15 @@ using Gaming_Shop.ShopManagement;
 using Gaming_Shop.WishlistManagement.Data;
 using Gaming_Shop.WishlistManagement;
 using Microsoft.OpenApi.Models;
-
+using Gaming_Shop.CartManagement.Data;
+using Gaming_Shop.CartManagement;
+using Stripe;
+using PaymentManagement.Data;
+using PaymentManagement.Services;
+using PaymentManagement;
 
 var builder = WebApplication.CreateBuilder(args);
-
+StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 // Add services to the container.
 builder.Services.AddIdentityCore<User>(opt =>
@@ -67,10 +72,18 @@ builder.Services.AddDbContext<ShopManagementDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDbContext<WishlistDbContext>(options =>
     options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<CartDbContext>(options =>
+    options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<PaymentDbContext>(options =>
+    options.UseSqlServer(connectionString));
+
 
 builder.Services.AddAccountManagementModule(builder.Configuration);
 builder.Services.AddShopManagementModule();
 builder.Services.AddWishlistManagementModule();
+builder.Services.AddCartManagementModule();
+builder.Services.AddStripePaymentManagementModule();
+
 
 
 builder.Services.AddControllers();
@@ -106,7 +119,8 @@ builder.Services.AddSwaggerGen(opt =>
         }
     });
 });
-
+builder.Services.Configure<StripeConfig>(builder.Configuration.GetSection("Stripe"));
+builder.Services.AddScoped<StripePaymentService>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigin",

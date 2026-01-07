@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-4">
+  <h3>My Cart</h3>
+
+  <ng-container *ngIf="cart && cart.items.length > 0; else emptyCart">
+
+    <table class="table table-bordered mt-3">
+      <thead class="table-light">
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let item of cart.items">
+          <td>{{ item.productName }}</td>
+          <td>${{ item.price }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>${{ item.price * item.quantity }}</td>
+          <td>
+            <button class="btn btn-danger btn-sm"
+                    (click)="removeFromCart(item.productId)">
+              Remove
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="d-flex justify-content-between align-items-center mt-3">
+      <h5>Total: ${{ cart.totalPrice }}</h5>
+
+      <button class="btn btn-outline-danger"
+              (click)="clearCart()">
+        Clear Cart
+      </button>
+      <button class="btn btn-success"
+              (click)="pay()"
+              [disabled]="!cart || cart.items.length === 0">
+        Pay
+      </button>
+    </div>
+
+  </ng-container>
+
+  <ng-template #emptyCart>
+    <p>Your cart is empty.</p>
+  </ng-template>
+</div>
